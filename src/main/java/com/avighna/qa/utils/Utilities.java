@@ -64,7 +64,9 @@ public class Utilities {
 					break;
 				case BOOLEAN:
 					data[i][j] = cell.getBooleanCellValue();
-					break;	
+					break;
+					default:
+						break;	
 		
 				}
 				

@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -20,6 +22,8 @@ public class Base {
 	public Properties dataProp;
 
 	public Base() {
+
+		this.driver = driver;
 
 		prop = new Properties();
 		File propFile = new File(
@@ -46,6 +50,8 @@ public class Base {
 
 	}
 
+
+
 	public WebDriver initializeBrowserAndOpenApplicationURL(String browserName) {
 
 		if (browserName.equalsIgnoreCase("chrome")) {
@@ -67,7 +73,12 @@ public class Base {
 		}
 
 		driver.get(prop.getProperty("url_staging"));
+		
+
 		driver.manage().window().maximize();
+
+		
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Utilities.IMPLICIT_WAIT_TIME));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Utilities.PAGE_LOAD_TIME));
 		

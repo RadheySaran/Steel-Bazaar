@@ -42,6 +42,7 @@ public class ExtentReporter {
 		extentReport.setSystemInfo("Username",System.getProperty("user.name"));
 		extentReport.setSystemInfo("Java Version",System.getProperty("java.version"));
 		
+		
 		return extentReport;
 	}
 

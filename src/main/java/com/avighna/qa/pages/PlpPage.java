@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 public class PlpPage {
 
@@ -63,9 +62,9 @@ public class PlpPage {
 		checkBox.click();
 		String categoryName1 = prodCtaegory1.getText();
 		String categoryName2 = prodCtaegory2.getText();
-		String value = thicknessValue.getText();
-		String priceCatlogValue = priceValue.getText();
-		String nameCatlog = catlogName.getText();
+		thicknessValue.getText();
+		priceValue.getText();
+		catlogName.getText();
 
 		try {
 			viewMoreButton.click();
@@ -75,9 +74,9 @@ public class PlpPage {
 			System.out.println(categoryName2 + "=catalog present");
 		}
 
-		String PDPnameCatlog = PDPcatlogName.getText();
-		String PDPthickness = PDPthicknessValue.getText();
-		String PDPprice = PDPpriceValue.getText();
+		PDPcatlogName.getText();
+		PDPthicknessValue.getText();
+		PDPpriceValue.getText();
 
 	}
 
